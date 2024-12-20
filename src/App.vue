@@ -1,27 +1,50 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  hello
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <background-wrapper />
+    <input v-model="key" type="text">
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import BackgroundWrapper from './components/homepage/background-wrapper.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    BackgroundWrapper
+  },
+  data() {
+    return {
+      key: ''
+    }
   }
 }
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #181828;
+  font-size: 14px;
+  line-height: 1;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
