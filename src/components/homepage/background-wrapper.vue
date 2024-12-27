@@ -1,6 +1,7 @@
 <template>
   <div class="background-wrapper">
-    <a href="#" target="_blank">
+    <!-- <a href="javascript:void(0)" target="_blank"> -->
+    <div class="wrapper">
       <header class="top-header">
       </header>
 
@@ -32,13 +33,13 @@
             <p class="message__text">We're sorry, the page you were looking for isn't found here. The link you followed may either be broken or no longer exists. Please try again, or take a look at our.</p>
           </div>
           <div class="error__nav e-nav">
-            <a href="#" target="_blanck" class="e-nav__link"></a>
+            <!-- <a href="#" target="_blanck" class="e-nav__link"></a> -->
           </div>
         </div>
         <!-- END Content -->
-
       </section>
-    </a>
+    <!-- </a> -->
+    </div>
   </div>
 </template>
 
@@ -50,6 +51,7 @@ export default {
 
 <style lang="scss">
 .background-wrapper {
+  user-select: none;
   /***********************************
         /* 1. BODY */
   /***********************************/

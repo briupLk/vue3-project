@@ -1,4 +1,10 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
+import appRouterConfig from '@/assets/config/router.config'
 
-Vue.use(VueRouter)
+const router = createRouter({
+  history: createWebHistory(),
+  routes: appRouterConfig.routers
+  // base: '',
+})
+
+export default router

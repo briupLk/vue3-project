@@ -1,17 +1,10 @@
 <template>
-  <div id="app">
-    <background-wrapper />
-    <input v-model="key" type="text">
-  </div>
+  <router-view />
 </template>
 
 <script>
-import BackgroundWrapper from './components/homepage/background-wrapper.vue';
 export default {
   name: 'App',
-  components: {
-    BackgroundWrapper
-  },
   data() {
     return {
       key: ''
@@ -33,18 +26,13 @@ body {
   overflow: hidden;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  background: #181828;
-  font-size: 14px;
-  line-height: 1;
-}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  width: 100vw;
+  height: 100vh;
 }
 </style>
