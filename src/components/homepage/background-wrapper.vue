@@ -15,7 +15,7 @@
       <!--Dust particle end--->
 
       <div class="lamp__wrap">
-        <div class="lamp">
+        <div :class="['lamp', { 'lamp--light': !isDark }]">
           <div class="cable"></div>
           <div class="cover"></div>
           <div class="in-cover">
@@ -29,8 +29,8 @@
         <!-- Content -->
         <div class="error__content">
           <div class="error__message message">
-            <h1 class="message__title">Page Not Found</h1>
-            <p class="message__text">We're sorry, the page you were looking for isn't found here. The link you followed may either be broken or no longer exists. Please try again, or take a look at our.</p>
+            <h1 class="message__title">搜索引擎</h1>
+            <p class="message__text">这里是HOME</p>
           </div>
           <div class="error__nav e-nav">
             <!-- <a href="#" target="_blanck" class="e-nav__link"></a> -->
@@ -44,8 +44,43 @@
 </template>
 
 <script>
+import { updateCss, removeCss } from '@/utils/css-style'
+
 export default {
-  name: 'BackgroundWrapper'
+  name: 'BackgroundWrapper',
+  props: {
+    isDark: {
+      type: Boolean,
+      default: true
+    }
+  },
+  watch: {
+    isDark: {
+      handler(newValue, oldValue) {
+        if (newValue) {
+          updateCss(
+            `
+  @keyframes move {
+    0% {
+      transform: rotate(40deg);
+    }
+    50% {
+      transform: rotate(-40deg);
+    }
+    100% {
+      transform: rotate(40deg);
+    }
+  }
+            `,
+            'light-move'
+          )
+        } else {
+          removeCss('light-move')
+        }
+      },
+      immediate: true
+    }
+  }
 }
 </script>
 
@@ -406,7 +441,7 @@ export default {
 
   .error__message {
     text-align: center;
-    color: #181828;
+    color: var(--uc-c-bg);
   }
 
   .message__title {
@@ -566,22 +601,23 @@ export default {
     animation-timing-function: cubic-bezier(0.6, 0, 0.38, 1);
     animation: move 5.1s infinite;
   }
-
-  @keyframes move {
-    0% {
-      transform: rotate(40deg);
+  
+  .lamp.lamp--light {
+    .in-cover {
+      background-color: #07b3c8;
+      .bulb {
+        box-shadow: unset;
+        background-color: #0391a8;
+      }
     }
-    50% {
-      transform: rotate(-40deg);
-    }
-    100% {
-      transform: rotate(40deg);
+    .light {
+      visibility: hidden;
     }
   }
 
   .cable {
     width: 8px;
-    height: 248px;
+    height: 120px; /** 灯长度 */
     background-image: linear-gradient(rgba(32, 148, 218, 0.7), rgb(193, 65, 25)),
       linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
@@ -635,7 +671,7 @@ export default {
     position: absolute;
     // left: 0px;
     // right: 0px;
-    top: 330px;
+    top: 202px; /** 光照高度 */
     margin: 0px auto;
     z-index: 1;
     border-radius: 90px 90px 0px 0px;

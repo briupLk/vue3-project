@@ -1,0 +1,17 @@
+.uc-switch-appearance-sun {
+  opacity: 1;
+}
+.uc-switch-appearance-moon {
+  opacity: 0;
+}
+
+.dark .uc-switch-appearance-sun {
+  opacity: 0;
+}
+.dark .uc-switch-appearance-moon {
+  opacity: 1;
+}
+
+.dark .uc-switch-appearance .uc-switch-check {
+  transform: translateX(18px);
+}

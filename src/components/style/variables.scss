@@ -1,0 +1,175 @@
+/**
+ * Colors Base
+ *
+ * These are the pure base color presets. Most of the time, you should not be
+ * using these colors directly in the theme but rather use "Colors Theme"
+ * instead because those are "Theme (light or dark)" dependant.
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --uc-c-white: #fff;
+  --uc-c-white-soft: #f9f9f9;
+  --uc-c-white-mute: #f1f1f1;
+
+  --uc-c-black: #181828;
+  --uc-c-black-pure: #000000;
+  --uc-c-black-soft: #242424;
+  --uc-c-black-mute: #2f2f2f;
+
+  --uc-c-indigo: #213547;
+  --uc-c-indigo-soft: #476582;
+  --uc-c-indigo-light: #aac8e4;
+
+  --uc-c-gray: #8e8e8e;
+  --uc-c-gray-light-1: #aeaeae;
+  --uc-c-gray-light-2: #c7c7c7;
+  --uc-c-gray-light-3: #d1d1d1;
+  --uc-c-gray-light-4: #e5e5e5;
+  --uc-c-gray-light-5: #f2f2f2;
+  --uc-c-gray-dark-1: #636363;
+  --uc-c-gray-dark-2: #484848;
+  --uc-c-gray-dark-3: #3a3a3a;
+  --uc-c-gray-dark-4: #282828;
+  --uc-c-gray-dark-5: #202020;
+
+  --uc-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --uc-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --uc-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --uc-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --uc-c-text-light-1: var(--uc-c-indigo);
+  --uc-c-text-light-2: rgba(60, 60, 60, 0.70);
+  --uc-c-text-light-3: rgba(60, 60, 60, 0.33);
+  --uc-c-text-light-4: rgba(60, 60, 60, 0.18);
+  --uc-c-text-light-code: var(--uc-c-indigo-soft);
+
+  --uc-c-text-dark-1: rgba(255, 255, 255, 0.87);
+  --uc-c-text-dark-2: rgba(235, 235, 235, 0.60);
+  --uc-c-text-dark-3: rgba(235, 235, 235, 0.38);
+  --uc-c-text-dark-4: rgba(235, 235, 235, 0.18);
+  --uc-c-text-dark-code: var(--uc-c-indigo-light);
+
+  --uc-c-green: #42b883;
+  --uc-c-green-light: #42d392;
+  --uc-c-green-lighter: #35eb9a;
+  --uc-c-green-dark: #33a06f;
+  --uc-c-green-darker: #155f3e;
+
+  --uc-c-blue: #3b8eed;
+  --uc-c-blue-light: #549ced;
+  --uc-c-blue-lighter: #50a2ff;
+  --uc-c-blue-dark: #3468a3;
+  --uc-c-blue-darker: #255489;
+
+  --uc-c-yellow: #ffc517;
+  --uc-c-yellow-light: #ffe417;
+  --uc-c-yellow-lighter: #ffff17;
+  --uc-c-yellow-dark: #e0ad15;
+  --uc-c-yellow-darker: #bc9112;
+
+  --uc-c-red: #ed3c50;
+  --uc-c-red-light: #f43771;
+  --uc-c-red-lighter: #fd1d7c;
+  --uc-c-red-dark: #cd2d3f;
+  --uc-c-red-darker: #ab2131;
+
+  --uc-c-purple: #de41e0;
+  --uc-c-purple-light: #e936eb;
+  --uc-c-purple-lighter: #f616f8;
+  --uc-c-purple-dark: #823c83;
+  --uc-c-purple-darker: #602960;
+}
+
+/**
+ * Colors Theme
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --uc-c-bg: var(--uc-c-white);
+  --uc-c-bg-soft: var(--uc-c-white-soft);
+  --uc-c-bg-mute: var(--uc-c-white-mute);
+
+  --uc-c-divider: var(--uc-c-divider-light-1);
+  --uc-c-divider-light: var(--uc-c-divider-light-2);
+
+  --uc-c-divider-inverse: var(--uc-c-divider-dark-1);
+  --uc-c-divider-inverse-light: var(--uc-c-divider-dark-2);
+
+  --uc-c-text-1: var(--uc-c-text-light-1);
+  --uc-c-text-2: var(--uc-c-text-light-2);
+  --uc-c-text-3: var(--uc-c-text-light-3);
+  --uc-c-text-4: var(--uc-c-text-light-4);
+  --uc-c-text-code: var(--uc-c-text-light-code);
+
+  --uc-c-text-inverse-1: var(--uc-c-text-dark-1);
+  --uc-c-text-inverse-2: var(--uc-c-text-dark-2);
+  --uc-c-text-inverse-3: var(--uc-c-text-dark-3);
+  --uc-c-text-inverse-4: var(--uc-c-text-dark-4);
+
+  --uc-c-brand: var(--uc-c-green);
+  --uc-c-brand-light: var(--uc-c-green-light);
+  --uc-c-brand-dark: var(--uc-c-green-dark);
+  --uc-c-brand-highlight: var(--uc-c-brand-dark);
+}
+
+.dark {
+  --uc-c-bg: var(--uc-c-black);
+  --uc-c-bg-soft: var(--uc-c-black-soft);
+  --uc-c-bg-mute: var(--uc-c-black-mute);
+
+  --uc-c-divider: var(--uc-c-divider-dark-1);
+  --uc-c-divider-light: var(--uc-c-divider-dark-2);
+
+  --uc-c-divider-inverse: var(--uc-c-divider-light-1);
+  --uc-c-divider-inverse-light: var(--uc-c-divider-light-2);
+
+  --uc-c-text-1: var(--uc-c-text-dark-1);
+  --uc-c-text-2: var(--uc-c-text-dark-2);
+  --uc-c-text-3: var(--uc-c-text-dark-3);
+  --uc-c-text-4: var(--uc-c-text-dark-4);
+  --uc-c-text-code: var(--uc-c-text-dark-code);
+
+  --uc-c-text-inverse-1: var(--uc-c-text-light-1);
+  --uc-c-text-inverse-2: var(--uc-c-text-light-2);
+  --uc-c-text-inverse-3: var(--uc-c-text-light-3);
+  --uc-c-text-inverse-4: var(--uc-c-text-light-4);
+
+  --uc-c-brand-highlight: var(--uc-c-brand-light);
+}
+
+/**
+ * Typography
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --uc-font-family-base: 'Inter var experimental', 'Inter var', Inter,
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  /**
+    * See <https://haoqun.blog/posts/2024/blogged-pull-requests-monospace/>
+    * for more details on the font selection
+    */
+  --uc-font-family-mono: ui-monospace, 'SF Mono', 'SFMono-Regular', Menlo,
+    Monaco, 'Cascadia Mono', Consolas, 'Liberation Mono', 'Noto Sans Mono',
+    'DejaVu Sans Mono', 'Roboto Mono', 'Courier New', monospace;
+}
+
+/**
+ * Shadows
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --uc-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --uc-shadow-2: 0 3px 12px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.07);
+  --uc-shadow-3: 0 12px 32px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
+  --uc-shadow-4: 0 14px 44px rgba(0, 0, 0, 0.12), 0 3px 9px rgba(0, 0, 0, 0.12);
+  --uc-shadow-5: 0 18px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.16);
+}
+
+/**
+ * Magic Numbers
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --uc-nav-height: 55px;
+}
